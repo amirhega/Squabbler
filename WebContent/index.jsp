@@ -45,6 +45,7 @@
 		p {
 			color: white;
 			text-align: center;
+			font-size: 3em;
 		}
 		#description {
 			position: fixed;
@@ -73,7 +74,7 @@
 
 		        if(profile.getName() != null) {
 		        var xhr = new XMLHttpRequest();
-		        xhr.open('POST', 'http://localhost:8080/LunchWithFriends/JDBCUser_Access');
+		        xhr.open('POST', 'http://localhost:8080/Squabbler/JDBCUser_Access');
 		        
 		        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		        xhr.onload = function() {
@@ -88,7 +89,7 @@
     </script>
     	
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	<form class="searchbar" action="http://localhost:8080/LunchWithFriends/SearchRestaurantDisplay"> <!-- replace this with a link to restaurants page -->
+	<form class="searchbar" action="http://localhost:8080/Squabbler/SearchRestaurantDisplay"> <!-- replace this with a link to restaurants page -->
 		<input type="text" name="searchname" placeholder="Search for your favorite restaurants...">
 		<button type="submit"><i class="fa fa-search"></i></button>
 		
