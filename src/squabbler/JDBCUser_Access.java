@@ -1,4 +1,4 @@
-package CSCI201_LunchWithFriends;
+package squabbler;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -65,17 +65,17 @@ public class JDBCUser_Access extends HttpServlet {
 						Long serID = rs.getLong("serID");
 						u = (User) userAccess.deSerializeJavaObjectFromDB(connection, serID);
 					} else {
-						CurrUser user = new CurrUser();
-						user.currUser = u;
+//						CurrUser user = new CurrUser();
+//						user.currUser = u;
 						System.out.println("cmbjhvjhfkon");
 						
-						//if(tempUser == null) {
+						
 							long serialized_id = userAccess.serializeJavaObjectToDB(connection, u);
 							
 							String sql1 = "INSERT INTO serIDs VALUES (" + "\'" + serialized_id + "\', " + "\'" + email + " \');";
 									PreparedStatement ps1 = connection.prepareStatement(sql1);
 									ps1.execute(sql1);
-						//}
+						
 					}
 
 			
